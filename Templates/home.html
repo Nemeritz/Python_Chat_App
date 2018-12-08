@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <link href="/css/Home.css" rel="stylesheet" type="text/css">
+        <script>
+        setTimeout(function(){
+			location.reload();
+        },30000);
+        </script>
+    </head>
+    <body>
+        <Header>COMPANY WORK</Header>
+    <div class="list">
+        <form action="/showProfile" method="get">
+            <div class="onlineList">
+            <Text >Current Online:</Text></br>
+            </div>
+            {% for n in mylist %}
+            <div class="onlineList">
+            <input class="Buttons" type="submit" action="/chatroom" method="get" name="username" value="{{n}}" ></input></br>
+            </div>
+            {% endfor %}
+        </form>
+    </div>
+    
+    <div class="home-profile">
+        <form action="/changeProfile" method="post">
+            Your Profile<br/>
+            <img class ="profile-pic" src="/img/default.jpg"></img><br/>
+            Name:<input class = "prof" type="text" placeholder={{name}} name="fullname"/><br/>
+            Position: <input class = "prof" type="text" placeholder={{pos}} name="position"/><br/>
+            Location: <input class = "prof" type="text" placeholder={{loc}} name="location"/><br/>
+            Description: <input class = "prof" type="text" placeholder={{des}} name="description"/><br/>
+            Picture: <input class = "prof" type="text" placeholder="image url" name="picture"/><br/>
+            <input type="submit" value="Change"/>
+        </form>
+    </div>
+    </body>
+    <footer>
+    <div class="logout">
+        <form action="/signout" method="get">
+            <input class="Buttons" type="submit" action="/signout" method="get" value="Logout" ></input></br>
+        </form>
+    </div>
+    </footer>
+</html>
+

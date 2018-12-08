@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <link href="/css/Home.css" rel="stylesheet" type="text/css">
+    <script>
+    function vidplay() {
+       var video = document.getElementById("Video1");
+       var button = document.getElementById("play");
+       if (video.paused) {
+          video.play();
+          button.textContent = "pause";
+       } else {
+          video.pause();
+          button.textContent = "play";
+       }
+    }
+    function restart() {
+        var video = document.getElementById("Video1");
+        video.currentTime = 0;
+    }
+    </script>
+    </head>
+    <body>
+        <Header>{{username}}'s Profile</Header>
+        
+    
+    <div class="home-profile">
+            <div class="profile">
+                <img src={{pic}} class="profile-pic"></img>
+            </div><br/>
+            <div class="profile">
+                <Text>Name: {{name}}</Text>
+            </div><br/>
+            <div class="profile">
+                <Text>Position: {{pos}}</Text>
+            </div><br/>
+            <div class="profile">
+                <Text>Location: {{loc}}</Text>
+            </div><br/>
+            <div class="profile">
+                <Text>Description: {{des}}</Text>
+            </div><br/>
+            
+            <div>
+                <form action="/chatroom" method="get" style="float:left;">
+                    <input class="Buttons" type="submit" action="/chatroom" method="get" name="username" value={{username}}>Send Message</input></br>
+                </form>
+            </div>
+    </div>
+    
+    <div class = "viddiv">
+        <Video id="Video1" src="/video/default.mp4"></Video><br/>
+        <Button id="play" value="play" name="play" onclick="vidplay()" class="vid-Buttons">play/pause</Button>
+        <Button id="restart" value="restart" onclick="restart()" class="vid-Buttons">restart</Button><br/>
+    </div>
+    </body>
+</html>
+

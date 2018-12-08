@@ -1,0 +1,111 @@
+body {
+    text-align:center;
+    margin:0 auto; 
+    background-color: #2F4F4F;
+}
+Header {
+    color: #FAFAFA;
+    font-family: Helvetica, Arial, Sans-Serif;
+    font-size: 50px;
+    text-align: center;
+}
+Form {
+    color: #FAFAFA;
+    margin:100px,0px,100px, 30px;
+}
+
+.login {
+    height:110px;
+    width:190px;
+    margin:auto;
+    margin-top:100px;
+    padding:10px;
+}
+
+.onlineList {
+    text-align:left;
+    margin:auto;
+    margin-left:10px;
+    margin-top:5px;
+}
+
+.Buttons {
+    height:30px;
+    width:100px;
+}
+
+.send-text {
+    height: 50px;
+    width: 500px;
+}
+
+.receive-text {
+    height: 400px;
+    width: 1000px;
+    margin: auto;
+    margin-bottom: 10px;
+    border:2px #FAFAFA solid;
+}
+
+.text-display {
+    text-align:left;
+    color: #FAFAFA;
+}
+
+.profile {
+    text-align: center;
+    color: #FAFAFA;
+}
+
+.home-profile {
+    float:right;
+    position: fixed;
+    right: 100px;
+    top:75px;
+    text-align: left;
+}
+
+.profile-pic {
+    width: 200px;
+    height: auto;
+}
+
+.list {
+    float:left;
+    bottom:200px;
+}
+
+.video {
+    width: 500px;
+    height: auto;
+}
+
+footer{
+    position: fixed; 
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+}
+
+.vid-Buttons {
+    height:30px;
+    width:100px;
+    margin: auto;
+    
+}
+
+.viddiv {
+    top:75px; 
+    left: 20px;
+}
+
+.prof {
+    right:0;
+    margin: auto;
+}
+
+.receiver {
+    height: 40px;
+    width: 100px;
+}

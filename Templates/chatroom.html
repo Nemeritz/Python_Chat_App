@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <link href="/css/Home.css" rel="stylesheet" type="text/css">
+        <script>
+        setTimeout(function(){
+			location.reload;
+        },10000);
+        </script>
+    </head>
+    <body>
+        <Header>Chatroom with {{partner}}</Header>
+    <div class="receive-text" id="refresh">
+        {% for n in messages %}
+            <div class="text-display" id="refresh">
+                <Text>{{n}}</Text><br/>
+            </div>
+        {% endfor %}
+    </div>
+    <div>
+        <form accept-charset="utf-8" action="/sendMessage" method="get">
+        <input class="send-text" type="text" size="100" name="message" autocomplete='off'/><br/>
+            Partner username:<input class="receiver" "type="text" size="100" name="partner" autocomplete='off'/><br/>
+        <input type="submit" value="Send"/></form>
+    </div>
+    
+    <div>
+        <form accept-charset="utf-8" action="/sendFile" method="get">
+            File Name:<input class="receiver" type="text" size="100" name="filename" autocomplete='off'/><br/>
+            Partner username:<input class="receiver" "type="text" size="100" name="partner" autocomplete='off'/><br/>
+        <input type="submit" value="Send File"/></form>
+    </div>
+    </body>
+</html>
+
